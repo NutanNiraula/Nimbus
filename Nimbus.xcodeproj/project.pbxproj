@@ -57,6 +57,7 @@
 		2DAB1DA021CE407F00997D7B /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
 		2DAB1DA221CE90D900997D7B /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		2DAB1DA621CE916F00997D7B /* AppUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUrls.swift; sourceTree = "<group>"; };
+		2DAB1DA821CE930100997D7B /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 		2DAB1D6221CE3F4000997D7B = {
 			isa = PBXGroup;
 			children = (
+				2DAB1DA821CE930100997D7B /* test.playground */,
 				2DAB1D6D21CE3F4000997D7B /* Nimbus */,
 				2DAB1D8221CE3F4100997D7B /* NimbusTests */,
 				2DAB1D8D21CE3F4100997D7B /* NimbusUITests */,
