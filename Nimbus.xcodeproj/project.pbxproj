@@ -15,6 +15,10 @@
 		2DAB1D8421CE3F4100997D7B /* NimbusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1D8321CE3F4100997D7B /* NimbusTests.swift */; };
 		2DAB1D8F21CE3F4100997D7B /* NimbusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1D8E21CE3F4100997D7B /* NimbusUITests.swift */; };
 		2DAB1D9D21CE401C00997D7B /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1D9C21CE401C00997D7B /* UrlBuilder.swift */; };
+		2DAB1D9F21CE406F00997D7B /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1D9E21CE406F00997D7B /* EndPointProtocol.swift */; };
+		2DAB1DA121CE407F00997D7B /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1DA021CE407F00997D7B /* HttpMethods.swift */; };
+		2DAB1DA321CE90D900997D7B /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1DA221CE90D900997D7B /* EndPoints.swift */; };
+		2DAB1DA721CE916F00997D7B /* AppUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1DA621CE916F00997D7B /* AppUrls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		2DAB1D8E21CE3F4100997D7B /* NimbusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusUITests.swift; sourceTree = "<group>"; };
 		2DAB1D9021CE3F4100997D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DAB1D9C21CE401C00997D7B /* UrlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
+		2DAB1D9E21CE406F00997D7B /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
+		2DAB1DA021CE407F00997D7B /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
+		2DAB1DA221CE90D900997D7B /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		2DAB1DA621CE916F00997D7B /* AppUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUrls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +109,13 @@
 			children = (
 				2DAB1D6E21CE3F4000997D7B /* AppDelegate.swift */,
 				2DAB1D7021CE3F4000997D7B /* ViewController.swift */,
-				2DAB1D9C21CE401C00997D7B /* UrlBuilder.swift */,
+				2DAB1DA421CE912C00997D7B /* Nimbus */,
 				2DAB1D7221CE3F4000997D7B /* Main.storyboard */,
 				2DAB1D7521CE3F4100997D7B /* Assets.xcassets */,
 				2DAB1D7721CE3F4100997D7B /* LaunchScreen.storyboard */,
 				2DAB1D7A21CE3F4100997D7B /* Info.plist */,
+				2DAB1DA221CE90D900997D7B /* EndPoints.swift */,
+				2DAB1DA621CE916F00997D7B /* AppUrls.swift */,
 			);
 			path = Nimbus;
 			sourceTree = "<group>";
@@ -126,6 +136,24 @@
 				2DAB1D9021CE3F4100997D7B /* Info.plist */,
 			);
 			path = NimbusUITests;
+			sourceTree = "<group>";
+		};
+		2DAB1DA421CE912C00997D7B /* Nimbus */ = {
+			isa = PBXGroup;
+			children = (
+				2DAB1DA521CE914000997D7B /* EndPoint */,
+			);
+			path = Nimbus;
+			sourceTree = "<group>";
+		};
+		2DAB1DA521CE914000997D7B /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				2DAB1D9C21CE401C00997D7B /* UrlBuilder.swift */,
+				2DAB1D9E21CE406F00997D7B /* EndPointProtocol.swift */,
+				2DAB1DA021CE407F00997D7B /* HttpMethods.swift */,
+			);
+			path = EndPoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DAB1DA121CE407F00997D7B /* HttpMethods.swift in Sources */,
+				2DAB1D9F21CE406F00997D7B /* EndPointProtocol.swift in Sources */,
 				2DAB1D9D21CE401C00997D7B /* UrlBuilder.swift in Sources */,
 				2DAB1D7121CE3F4000997D7B /* ViewController.swift in Sources */,
+				2DAB1DA721CE916F00997D7B /* AppUrls.swift in Sources */,
+				2DAB1DA321CE90D900997D7B /* EndPoints.swift in Sources */,
 				2DAB1D6F21CE3F4000997D7B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
