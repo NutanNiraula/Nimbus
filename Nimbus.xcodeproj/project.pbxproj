@@ -14,6 +14,7 @@
 		2DAB1D7921CE3F4100997D7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAB1D7721CE3F4100997D7B /* LaunchScreen.storyboard */; };
 		2DAB1D8421CE3F4100997D7B /* NimbusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1D8321CE3F4100997D7B /* NimbusTests.swift */; };
 		2DAB1D8F21CE3F4100997D7B /* NimbusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1D8E21CE3F4100997D7B /* NimbusUITests.swift */; };
+		2DAB1D9D21CE401C00997D7B /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1D9C21CE401C00997D7B /* UrlBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2DAB1D8A21CE3F4100997D7B /* NimbusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimbusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAB1D8E21CE3F4100997D7B /* NimbusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusUITests.swift; sourceTree = "<group>"; };
 		2DAB1D9021CE3F4100997D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DAB1D9C21CE401C00997D7B /* UrlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				2DAB1D6E21CE3F4000997D7B /* AppDelegate.swift */,
 				2DAB1D7021CE3F4000997D7B /* ViewController.swift */,
+				2DAB1D9C21CE401C00997D7B /* UrlBuilder.swift */,
 				2DAB1D7221CE3F4000997D7B /* Main.storyboard */,
 				2DAB1D7521CE3F4100997D7B /* Assets.xcassets */,
 				2DAB1D7721CE3F4100997D7B /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DAB1D9D21CE401C00997D7B /* UrlBuilder.swift in Sources */,
 				2DAB1D7121CE3F4000997D7B /* ViewController.swift in Sources */,
 				2DAB1D6F21CE3F4000997D7B /* AppDelegate.swift in Sources */,
 			);
@@ -433,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XZ6X2P729Y;
 				INFOPLIST_FILE = Nimbus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XZ6X2P729Y;
 				INFOPLIST_FILE = Nimbus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
