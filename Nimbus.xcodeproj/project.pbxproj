@@ -13,6 +13,9 @@
 		137EBF4E21D22AE30082A65F /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF4D21D22AE30082A65F /* NetworkResult.swift */; };
 		137EBF5121D22B420082A65F /* NimbusConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF5021D22B420082A65F /* NimbusConfigurator.swift */; };
 		137EBF5321D22B780082A65F /* NimbusSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF5221D22B780082A65F /* NimbusSessionManager.swift */; };
+		137EBF5521D22DFC0082A65F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF5421D22DFC0082A65F /* ViewModel.swift */; };
+		137EBF5721D22FD80082A65F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF5621D22FD80082A65F /* Model.swift */; };
+		137EBF5A21D231810082A65F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF5921D231810082A65F /* Extensions.swift */; };
 		2DAB1D6F21CE3F4000997D7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1D6E21CE3F4000997D7B /* AppDelegate.swift */; };
 		2DAB1D7121CE3F4000997D7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1D7021CE3F4000997D7B /* ViewController.swift */; };
 		2DAB1D7421CE3F4000997D7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAB1D7221CE3F4000997D7B /* Main.storyboard */; };
@@ -51,6 +54,9 @@
 		137EBF4D21D22AE30082A65F /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		137EBF5021D22B420082A65F /* NimbusConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusConfigurator.swift; sourceTree = "<group>"; };
 		137EBF5221D22B780082A65F /* NimbusSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusSessionManager.swift; sourceTree = "<group>"; };
+		137EBF5421D22DFC0082A65F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		137EBF5621D22FD80082A65F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		137EBF5921D231810082A65F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2DAB1D6B21CE3F4000997D7B /* Nimbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAB1D6E21CE3F4000997D7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DAB1D7021CE3F4000997D7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +130,16 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		137EBF5821D230100082A65F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2DAB1D7021CE3F4000997D7B /* ViewController.swift */,
+				137EBF5421D22DFC0082A65F /* ViewModel.swift */,
+				137EBF5621D22FD80082A65F /* Model.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		2DAB1D6221CE3F4000997D7B = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				2DAB1D6E21CE3F4000997D7B /* AppDelegate.swift */,
-				2DAB1D7021CE3F4000997D7B /* ViewController.swift */,
+				137EBF5821D230100082A65F /* Module */,
 				2DAB1DA421CE912C00997D7B /* Nimbus */,
 				2DAB1D7221CE3F4000997D7B /* Main.storyboard */,
 				2DAB1D7521CE3F4100997D7B /* Assets.xcassets */,
@@ -157,6 +173,7 @@
 				2DAB1D7A21CE3F4100997D7B /* Info.plist */,
 				2DAB1DA221CE90D900997D7B /* EndPoints.swift */,
 				2DAB1DA621CE916F00997D7B /* AppUrls.swift */,
+				137EBF5921D231810082A65F /* Extensions.swift */,
 			);
 			path = Nimbus;
 			sourceTree = "<group>";
@@ -331,15 +348,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137EBF5721D22FD80082A65F /* Model.swift in Sources */,
 				2DAB1DA121CE407F00997D7B /* HttpMethods.swift in Sources */,
 				2DAB1D9F21CE406F00997D7B /* EndPointProtocol.swift in Sources */,
 				137EBF4E21D22AE30082A65F /* NetworkResult.swift in Sources */,
 				137EBF4721D22A680082A65F /* NetworkRequest.swift in Sources */,
 				137EBF5121D22B420082A65F /* NimbusConfigurator.swift in Sources */,
 				137EBF4B21D22A9C0082A65F /* APIClient.swift in Sources */,
+				137EBF5521D22DFC0082A65F /* ViewModel.swift in Sources */,
 				2DAB1D9D21CE401C00997D7B /* UrlBuilder.swift in Sources */,
 				2DAB1D7121CE3F4000997D7B /* ViewController.swift in Sources */,
 				137EBF4921D22A770082A65F /* NetworkResponse.swift in Sources */,
+				137EBF5A21D231810082A65F /* Extensions.swift in Sources */,
 				2DAB1DA721CE916F00997D7B /* AppUrls.swift in Sources */,
 				2DAB1DA321CE90D900997D7B /* EndPoints.swift in Sources */,
 				2DAB1D6F21CE3F4000997D7B /* AppDelegate.swift in Sources */,

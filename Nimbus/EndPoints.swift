@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct LoginEndPoint: EndPointProtocol {
-    var url: URL?  = AppUrls.getAppUrl(fromPath: "api/login")
+struct ToDoDataEndPoint: EndPointProtocol {
+    var url: URL?  = AppUrls.getAppUrl(fromPath: "todos")
     var method: HttpMethod = .post
 }
 

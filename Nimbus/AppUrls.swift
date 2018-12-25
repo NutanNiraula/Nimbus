@@ -9,7 +9,7 @@
 import Foundation
 
 struct AppUrls {
-    private static let urlBuilder = URLBuilder().set(scheme: "http").set(host: "myHost")
+    private static let urlBuilder = URLBuilder().set(scheme: "https").set(host: "jsonplaceholder.typicode.com")
     
     static func getAppUrl(fromPath path: String) -> URL? {
         return AppUrls.urlBuilder.set(path: path).build()
