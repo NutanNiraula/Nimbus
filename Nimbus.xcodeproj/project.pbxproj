@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		137EBF4721D22A680082A65F /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF4621D22A680082A65F /* NetworkRequest.swift */; };
+		137EBF4921D22A770082A65F /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF4821D22A770082A65F /* NetworkResponse.swift */; };
+		137EBF4B21D22A9C0082A65F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF4A21D22A9C0082A65F /* APIClient.swift */; };
+		137EBF4E21D22AE30082A65F /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF4D21D22AE30082A65F /* NetworkResult.swift */; };
+		137EBF5121D22B420082A65F /* NimbusConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF5021D22B420082A65F /* NimbusConfigurator.swift */; };
+		137EBF5321D22B780082A65F /* NimbusSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EBF5221D22B780082A65F /* NimbusSessionManager.swift */; };
 		2DAB1D6F21CE3F4000997D7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1D6E21CE3F4000997D7B /* AppDelegate.swift */; };
 		2DAB1D7121CE3F4000997D7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1D7021CE3F4000997D7B /* ViewController.swift */; };
 		2DAB1D7421CE3F4000997D7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAB1D7221CE3F4000997D7B /* Main.storyboard */; };
@@ -39,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		137EBF4621D22A680082A65F /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		137EBF4821D22A770082A65F /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		137EBF4A21D22A9C0082A65F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		137EBF4D21D22AE30082A65F /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		137EBF5021D22B420082A65F /* NimbusConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusConfigurator.swift; sourceTree = "<group>"; };
+		137EBF5221D22B780082A65F /* NimbusSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbusSessionManager.swift; sourceTree = "<group>"; };
 		2DAB1D6B21CE3F4000997D7B /* Nimbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAB1D6E21CE3F4000997D7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DAB1D7021CE3F4000997D7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +97,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		137EBF4521D22A420082A65F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				137EBF4621D22A680082A65F /* NetworkRequest.swift */,
+				137EBF4821D22A770082A65F /* NetworkResponse.swift */,
+				137EBF4A21D22A9C0082A65F /* APIClient.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		137EBF4C21D22AB40082A65F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				137EBF4D21D22AE30082A65F /* NetworkResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		137EBF4F21D22B260082A65F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				137EBF5021D22B420082A65F /* NimbusConfigurator.swift */,
+				137EBF5221D22B780082A65F /* NimbusSessionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		2DAB1D6221CE3F4000997D7B = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +182,9 @@
 		2DAB1DA421CE912C00997D7B /* Nimbus */ = {
 			isa = PBXGroup;
 			children = (
+				137EBF4F21D22B260082A65F /* Managers */,
+				137EBF4C21D22AB40082A65F /* Models */,
+				137EBF4521D22A420082A65F /* Protocols */,
 				2DAB1DA521CE914000997D7B /* EndPoint */,
 			);
 			path = Nimbus;
@@ -291,11 +333,17 @@
 			files = (
 				2DAB1DA121CE407F00997D7B /* HttpMethods.swift in Sources */,
 				2DAB1D9F21CE406F00997D7B /* EndPointProtocol.swift in Sources */,
+				137EBF4E21D22AE30082A65F /* NetworkResult.swift in Sources */,
+				137EBF4721D22A680082A65F /* NetworkRequest.swift in Sources */,
+				137EBF5121D22B420082A65F /* NimbusConfigurator.swift in Sources */,
+				137EBF4B21D22A9C0082A65F /* APIClient.swift in Sources */,
 				2DAB1D9D21CE401C00997D7B /* UrlBuilder.swift in Sources */,
 				2DAB1D7121CE3F4000997D7B /* ViewController.swift in Sources */,
+				137EBF4921D22A770082A65F /* NetworkResponse.swift in Sources */,
 				2DAB1DA721CE916F00997D7B /* AppUrls.swift in Sources */,
 				2DAB1DA321CE90D900997D7B /* EndPoints.swift in Sources */,
 				2DAB1D6F21CE3F4000997D7B /* AppDelegate.swift in Sources */,
+				137EBF5321D22B780082A65F /* NimbusSessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
