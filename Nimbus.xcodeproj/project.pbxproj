@@ -133,11 +133,36 @@
 		137EBF5821D230100082A65F /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				2DAB1D7021CE3F4000997D7B /* ViewController.swift */,
-				137EBF5421D22DFC0082A65F /* ViewModel.swift */,
-				137EBF5621D22FD80082A65F /* Model.swift */,
+				137EBF5B21D238200082A65F /* Models */,
+				137EBF5D21D2382D0082A65F /* ViewController */,
+				137EBF5C21D238270082A65F /* ViewModel */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		137EBF5B21D238200082A65F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2DAB1DA221CE90D900997D7B /* EndPoints.swift */,
+				137EBF5621D22FD80082A65F /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		137EBF5C21D238270082A65F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				137EBF5421D22DFC0082A65F /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		137EBF5D21D2382D0082A65F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2DAB1D7021CE3F4000997D7B /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		2DAB1D6221CE3F4000997D7B = {
@@ -171,7 +196,6 @@
 				2DAB1D7521CE3F4100997D7B /* Assets.xcassets */,
 				2DAB1D7721CE3F4100997D7B /* LaunchScreen.storyboard */,
 				2DAB1D7A21CE3F4100997D7B /* Info.plist */,
-				2DAB1DA221CE90D900997D7B /* EndPoints.swift */,
 				2DAB1DA621CE916F00997D7B /* AppUrls.swift */,
 				137EBF5921D231810082A65F /* Extensions.swift */,
 			);

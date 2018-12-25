@@ -13,11 +13,3 @@ struct ToDoDataEndPoint: EndPointProtocol {
     var method: HttpMethod = .post
 }
 
-struct ThirdPartyTestEndPoint: EndPointProtocol {
-    var url: URL? = URLBuilder()
-        .set(scheme: "https")
-        .set(host: "host")
-        .set(path: "path")
-        .build()
-    var method: HttpMethod = .get
-}
