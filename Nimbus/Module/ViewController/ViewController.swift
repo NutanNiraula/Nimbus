@@ -12,8 +12,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var callNetworkButton: UIButton!
     @IBOutlet weak var responseTextView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     
-    private let viewModel = ViewModel(todoFetchService: NimbusSessionManager(withEndPoint: ToDoDataEndPoint()))
+     private let viewModel = ViewModel(todoFetchService: NimbusSessionManager(withEndPoint: ToDoDataEndPoint()), imageFetchService: NimbusSessionManager(withEndPoint: PlaceHolderImageEndPoint()))
+    
+    @IBAction func onGetImageTapped(_ sender: Any) {
+        viewModel.getImage()
+    }
     
     @IBAction func onCallNetworkButtonTapped(_ sender: Any) {
         guard let id = Int(idTextField.text ?? "0") else {
@@ -27,6 +32,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configureViews()
         bindDataModelToResponsetextView()
+        bindImageToImageView()
     }
     
     private func configureViews() {
@@ -39,6 +45,14 @@ class ViewController: UIViewController {
         viewModel.dataModel = { [weak self] data in
             DispatchQueue.main.async {
                 self?.responseTextView.text = data.description
+            }
+        }
+    }
+    
+    private func bindImageToImageView() {
+        viewModel.image = { [weak self] img in
+            DispatchQueue.main.async {
+                self?.imageView.image = img
             }
         }
     }

@@ -6,14 +6,17 @@
 //  Copyright © 2018 Nutan Niraula. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ViewModel {
     var toDoFetchClient: APIClient
+    var imageFetchClient: APIClient
     var dataModel: ((ToDoData) -> ())?
+    var image: ((UIImage) -> ())?
     
-    init(todoFetchService: APIClient) {
+    init(todoFetchService: APIClient, imageFetchService: APIClient) {
         self.toDoFetchClient = todoFetchService
+        self.imageFetchClient = imageFetchService
     }
     
     func getData(forId id: Int = 5) {
@@ -29,4 +32,14 @@ class ViewModel {
         }
     }
     
+    func getImage() {
+        imageFetchClient.request(withObject: nil) { [weak self] (result) in
+            switch result.getPNGImage() {
+            case .success(let data):
+                self?.image!(data)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Nutan Niraula. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum NetworkResult<Value> {
     case success(Value)
@@ -46,6 +46,18 @@ extension NetworkResult where Value == Data? {
             }
         case .failure(let error):
             return NetworkResult<ResponseType>.failure(error)
+        }
+    }
+    
+    func getPNGImage() -> NetworkResult<UIImage>  {
+        switch self {
+        case .success(let data):
+                guard let imgData = data, let image = UIImage(data: imgData) else {
+                    return NetworkResult<UIImage>.failure(NetworkError.apiError(message: "image couldn't be decoded"))
+                }
+                return NetworkResult<UIImage>.success(image)
+        case .failure(let error):
+            return NetworkResult<UIImage>.failure(error)
         }
     }
 }
