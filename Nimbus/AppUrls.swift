@@ -24,5 +24,5 @@ struct ThirdPartyTestEndPoint: EndPointProtocol {
         .set(host: "host")
         .set(path: "path")
         .build()
-    var method: HttpMethod = .get
+    var method: HTTPMethods = .get
 }

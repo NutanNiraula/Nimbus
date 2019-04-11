@@ -10,5 +10,5 @@ import Foundation
 
 protocol EndPointProtocol {
     var url: URL? {get set}
-    var method: HttpMethod {get}
+    var method: HTTPMethods {get}
 }

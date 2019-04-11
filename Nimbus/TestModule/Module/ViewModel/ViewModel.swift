@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewModel {
+    
     var toDoFetchClient: APIClient
     var imageFetchClient: APIClient
     var dataModel: ((ToDoData) -> ())?
@@ -42,4 +43,5 @@ class ViewModel {
             }
         }
     }
+    
 }

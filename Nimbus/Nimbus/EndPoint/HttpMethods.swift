@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Alamofire
 
-enum HttpMethod: String {
+enum HTTPMethods: String {
     case get = "GET"
     case head = "HEAD"
     case post = "POST"
@@ -18,4 +19,27 @@ enum HttpMethod: String {
     case connect = "CONNECT"
     case trace = "TRACE"
     case options = "OPTIONS"
+    
+    func alamofireEquivalentHTTPMethod() -> HTTPMethod {
+        switch self {
+        case .options:
+            return HTTPMethod.options
+        case .get:
+            return HTTPMethod.get
+        case .head:
+            return HTTPMethod.head
+        case .post:
+            return HTTPMethod.post
+        case .put:
+            return HTTPMethod.put
+        case .patch:
+            return HTTPMethod.patch
+        case .delete:
+            return HTTPMethod.delete
+        case .trace:
+            return HTTPMethod.trace
+        case .connect:
+            return HTTPMethod.connect
+        }
+    }
 }

@@ -28,6 +28,7 @@
 		2DAB1DA121CE407F00997D7B /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1DA021CE407F00997D7B /* HttpMethods.swift */; };
 		2DAB1DA321CE90D900997D7B /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1DA221CE90D900997D7B /* EndPoints.swift */; };
 		2DAB1DA721CE916F00997D7B /* AppUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB1DA621CE916F00997D7B /* AppUrls.swift */; };
+		2DE2528D225FAE5D0099C5EF /* EndPointBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2528C225FAE5D0099C5EF /* EndPointBuilder.swift */; };
 		C8896FCD5E645D9473A897AD /* Pods_NimbusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3515C49A24A5DA7CA0374434 /* Pods_NimbusUITests.framework */; };
 		E06F34D07A9A4AEE24F9364D /* Pods_Nimbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B976B3BC6DBD2EB6CA842DA /* Pods_Nimbus.framework */; };
 		E4B97E82A9D659EB72FE4509 /* Pods_NimbusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E34732970401CD27A806E99 /* Pods_NimbusTests.framework */; };
@@ -81,6 +82,7 @@
 		2DAB1DA221CE90D900997D7B /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		2DAB1DA621CE916F00997D7B /* AppUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUrls.swift; sourceTree = "<group>"; };
 		2DAB1DA821CE930100997D7B /* test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2DE2528C225FAE5D0099C5EF /* EndPointBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointBuilder.swift; sourceTree = "<group>"; };
 		3515C49A24A5DA7CA0374434 /* Pods_NimbusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A363B0A70C992657AE3DFB /* Pods-NimbusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NimbusTests/Pods-NimbusTests.release.xcconfig"; sourceTree = "<group>"; };
 		543C0E38CFA2E0636616B0B8 /* Pods-Nimbus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nimbus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nimbus/Pods-Nimbus.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,7 +160,6 @@
 		137EBF5B21D238200082A65F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2DAB1DA221CE90D900997D7B /* EndPoints.swift */,
 				137EBF5621D22FD80082A65F /* Model.swift */,
 			);
 			path = Models;
@@ -264,6 +265,7 @@
 		2DAB1DA521CE914000997D7B /* EndPoint */ = {
 			isa = PBXGroup;
 			children = (
+				2DE2528C225FAE5D0099C5EF /* EndPointBuilder.swift */,
 				2DAB1D9C21CE401C00997D7B /* UrlBuilder.swift */,
 				2DAB1D9E21CE406F00997D7B /* EndPointProtocol.swift */,
 				2DAB1DA021CE407F00997D7B /* HttpMethods.swift */,
@@ -274,9 +276,18 @@
 		2DE2528B225FAC790099C5EF /* TestModule */ = {
 			isa = PBXGroup;
 			children = (
+				2DE2528E225FAEBD0099C5EF /* EndPoints */,
 				137EBF5821D230100082A65F /* Module */,
 			);
 			path = TestModule;
+			sourceTree = "<group>";
+		};
+		2DE2528E225FAEBD0099C5EF /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				2DAB1DA221CE90D900997D7B /* EndPoints.swift */,
+			);
+			path = EndPoints;
 			sourceTree = "<group>";
 		};
 		A303DE18D4A729770DB34255 /* Frameworks */ = {
@@ -505,6 +516,7 @@
 				2DAB1DA121CE407F00997D7B /* HttpMethods.swift in Sources */,
 				2DAB1D9F21CE406F00997D7B /* EndPointProtocol.swift in Sources */,
 				137EBF4E21D22AE30082A65F /* NetworkResult.swift in Sources */,
+				2DE2528D225FAE5D0099C5EF /* EndPointBuilder.swift in Sources */,
 				137EBF4721D22A680082A65F /* NetworkRequest.swift in Sources */,
 				137EBF5121D22B420082A65F /* NimbusConfigurator.swift in Sources */,
 				137EBF4B21D22A9C0082A65F /* APIClient.swift in Sources */,

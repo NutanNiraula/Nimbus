@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var idTextField: UITextField!
-    @IBOutlet weak var callNetworkButton: UIButton!
-    @IBOutlet weak var responseTextView: UITextView!
-    @IBOutlet weak var imageView: UIImageView!
     
-     private let viewModel = ViewModel(todoFetchService: NimbusSessionManager(withEndPoint: ToDoDataEndPoint()), imageFetchService: NimbusSessionManager(withEndPoint: PlaceHolderImageEndPoint()))
+    @IBOutlet private var idTextField: UITextField!
+    @IBOutlet private var callNetworkButton: UIButton!
+    @IBOutlet private var responseTextView: UITextView!
+    @IBOutlet private var imageView: UIImageView!
+    
+    private let viewModel = ViewModel(todoFetchService: NimbusSessionManager(withEndPoint: ToDoDataEndPoint()), imageFetchService: NimbusSessionManager(withEndPoint: PlaceHolderImageEndPoint()))
     
     @IBAction func onGetImageTapped(_ sender: Any) {
         viewModel.getImage()
@@ -56,5 +57,6 @@ class ViewController: UIViewController {
             }
         }
     }
+    
 }
 
