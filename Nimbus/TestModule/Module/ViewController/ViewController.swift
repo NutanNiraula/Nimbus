@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ViewControllerIdentifiable {
     
     @IBOutlet private var idTextField: UITextField!
     @IBOutlet private var callNetworkButton: UIButton!
     @IBOutlet private var responseTextView: UITextView!
     @IBOutlet private var imageView: UIImageView!
     
-    private let viewModel = ViewModel(todoFetchService: NimbusSessionManager(withEndPoint: ToDoDataEndPoint()), imageFetchService: NimbusSessionManager(withEndPoint: PlaceHolderImageEndPoint()))
+    private let viewModel = ViewModel(todoFetchService: NimbusSessionManager(endPoint: ToDoDataEndPoint()), imageFetchService: NimbusSessionManager(endPoint: PlaceHolderImageEndPoint()))
     
     @IBAction func onGetImageTapped(_ sender: Any) {
         viewModel.getImage()
