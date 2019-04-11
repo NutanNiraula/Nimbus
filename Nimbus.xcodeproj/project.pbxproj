@@ -45,6 +45,11 @@
 		2DE252AD225FB3090099C5EF /* NetworkRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE252AB225FB3090099C5EF /* NetworkRetrier.swift */; };
 		2DE252AF225FB4BB0099C5EF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE252AE225FB4BB0099C5EF /* AppCoordinator.swift */; };
 		2DE252B3225FB5BB0099C5EF /* StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE252B2225FB5BB0099C5EF /* StoryBoard.swift */; };
+		2DE252BA225FB7290099C5EF /* BaseXCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE252B5225FB7280099C5EF /* BaseXCTest.swift */; };
+		2DE252BB225FB7290099C5EF /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE252B7225FB7290099C5EF /* JsonReader.swift */; };
+		2DE252BC225FB7290099C5EF /* TestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE252B8225FB7290099C5EF /* TestBundle.swift */; };
+		2DE252BD225FB7290099C5EF /* MockNetworkCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE252B9225FB7290099C5EF /* MockNetworkCaller.swift */; };
+		2DE252BF225FB9CC0099C5EF /* Success.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DE252BE225FB9CC0099C5EF /* Success.json */; };
 		C8896FCD5E645D9473A897AD /* Pods_NimbusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3515C49A24A5DA7CA0374434 /* Pods_NimbusUITests.framework */; };
 		E06F34D07A9A4AEE24F9364D /* Pods_Nimbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B976B3BC6DBD2EB6CA842DA /* Pods_Nimbus.framework */; };
 		E4B97E82A9D659EB72FE4509 /* Pods_NimbusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E34732970401CD27A806E99 /* Pods_NimbusTests.framework */; };
@@ -115,6 +120,11 @@
 		2DE252AB225FB3090099C5EF /* NetworkRetrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRetrier.swift; sourceTree = "<group>"; };
 		2DE252AE225FB4BB0099C5EF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		2DE252B2225FB5BB0099C5EF /* StoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoard.swift; sourceTree = "<group>"; };
+		2DE252B5225FB7280099C5EF /* BaseXCTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseXCTest.swift; sourceTree = "<group>"; };
+		2DE252B7225FB7290099C5EF /* JsonReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
+		2DE252B8225FB7290099C5EF /* TestBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestBundle.swift; sourceTree = "<group>"; };
+		2DE252B9225FB7290099C5EF /* MockNetworkCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkCaller.swift; sourceTree = "<group>"; };
+		2DE252BE225FB9CC0099C5EF /* Success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Success.json; sourceTree = "<group>"; };
 		3515C49A24A5DA7CA0374434 /* Pods_NimbusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimbusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A363B0A70C992657AE3DFB /* Pods-NimbusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NimbusTests/Pods-NimbusTests.release.xcconfig"; sourceTree = "<group>"; };
 		543C0E38CFA2E0636616B0B8 /* Pods-Nimbus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nimbus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nimbus/Pods-Nimbus.debug.xcconfig"; sourceTree = "<group>"; };
@@ -271,8 +281,11 @@
 		2DAB1D8221CE3F4100997D7B /* NimbusTests */ = {
 			isa = PBXGroup;
 			children = (
+				2DE252B4225FB7280099C5EF /* Base */,
+				2DE252B6225FB7290099C5EF /* TestHelpers */,
 				2DAB1D8321CE3F4100997D7B /* NimbusTests.swift */,
 				2DAB1D8521CE3F4100997D7B /* Info.plist */,
+				2DE252BE225FB9CC0099C5EF /* Success.json */,
 			);
 			path = NimbusTests;
 			sourceTree = "<group>";
@@ -376,6 +389,24 @@
 				2DE252B2225FB5BB0099C5EF /* StoryBoard.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		2DE252B4225FB7280099C5EF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2DE252B5225FB7280099C5EF /* BaseXCTest.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2DE252B6225FB7290099C5EF /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				2DE252B7225FB7290099C5EF /* JsonReader.swift */,
+				2DE252B8225FB7290099C5EF /* TestBundle.swift */,
+				2DE252B9225FB7290099C5EF /* MockNetworkCaller.swift */,
+			);
+			path = TestHelpers;
 			sourceTree = "<group>";
 		};
 		A303DE18D4A729770DB34255 /* Frameworks */ = {
@@ -506,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE252BF225FB9CC0099C5EF /* Success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +673,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DAB1D8421CE3F4100997D7B /* NimbusTests.swift in Sources */,
+				2DE252BC225FB7290099C5EF /* TestBundle.swift in Sources */,
+				2DE252BB225FB7290099C5EF /* JsonReader.swift in Sources */,
+				2DE252BA225FB7290099C5EF /* BaseXCTest.swift in Sources */,
+				2DE252BD225FB7290099C5EF /* MockNetworkCaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

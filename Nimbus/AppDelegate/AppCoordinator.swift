@@ -27,8 +27,9 @@ class AppCoordinator {
         navigationController = nc
     }
     
-    func setInitialPage(isUserLoggedIn isLoggedIn: Bool) {
+    func setInitialPage() {
         let testVC = Storyboard.test.viewController(ViewController.self)
+        testVC.viewModel = ViewModel(todoFetchServiceEndPoint:  ToDoDataEndPoint(), imageFetchServiceEndPoint: PlaceHolderImageEndPoint())
         appDelegate.window?.rootViewController = testVC
         appDelegate.window?.makeKeyAndVisible()
     }

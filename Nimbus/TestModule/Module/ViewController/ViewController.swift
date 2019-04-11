@@ -10,33 +10,24 @@ import UIKit
 
 class ViewController: UIViewController, ViewControllerIdentifiable {
     
+    //MARK:- variables
     @IBOutlet private var idTextField: UITextField!
     @IBOutlet private var callNetworkButton: UIButton!
     @IBOutlet private var responseTextView: UITextView!
     @IBOutlet private var imageView: UIImageView!
     
-    private let viewModel = ViewModel(todoFetchService: NimbusSessionManager(endPoint: ToDoDataEndPoint()), imageFetchService: NimbusSessionManager(endPoint: PlaceHolderImageEndPoint()))
-    
-    @IBAction func onGetImageTapped(_ sender: Any) {
-        viewModel.getImage()
-    }
-    
-    @IBAction func onCallNetworkButtonTapped(_ sender: Any) {
-        guard let id = Int(idTextField.text ?? "0") else {
-            responseTextView.text = "Id needs to be Integer"
-            return
-        }
-        viewModel.getData(forId: id)
-    }
+    var viewModel: ViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViews()
+        //code should read like algorithm steps in viewDidLoad, you can fold rest of the functions
+        styleSubViews()
         bindDataModelToResponsetextView()
         bindImageToImageView()
     }
     
-    private func configureViews() {
+    //MARK:- Foldable functions
+    private func styleSubViews() {
         idTextField.keyboardType = UIKeyboardType.numberPad
         callNetworkButton.layer.cornerRadius = 10
         callNetworkButton.clipsToBounds = true
@@ -60,3 +51,19 @@ class ViewController: UIViewController, ViewControllerIdentifiable {
     
 }
 
+//MARK:- IBActions
+extension ViewController {
+    
+    @IBAction func onGetImageTapped(_ sender: Any) {
+        viewModel.getImage()
+    }
+    
+    @IBAction func onCallNetworkButtonTapped(_ sender: Any) {
+        guard let id = Int(idTextField.text ?? "0") else {
+            responseTextView.text = "Id needs to be Integer"
+            return
+        }
+        viewModel.getData(forId: id)
+    }
+    
+}

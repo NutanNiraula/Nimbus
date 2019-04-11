@@ -12,12 +12,12 @@ class ViewModel {
     
     var toDoFetchClient: APIClient
     var imageFetchClient: APIClient
-    var dataModel: ((ToDoData) -> ())?
-    var image: ((UIImage) -> ())?
+    var dataModel: ((ToDoData) -> ())!
+    var image: ((UIImage) -> ())!
     
-    init(todoFetchService: APIClient, imageFetchService: APIClient) {
-        self.toDoFetchClient = todoFetchService
-        self.imageFetchClient = imageFetchService
+    init(todoFetchServiceEndPoint: ToDoDataEndPoint, imageFetchServiceEndPoint: PlaceHolderImageEndPoint, networkFactory: NetworkCallerFactory = NetworkCallerFactory()) {
+        self.toDoFetchClient = networkFactory.createNetworkCaller(endPoint: todoFetchServiceEndPoint)
+        self.imageFetchClient = networkFactory.createNetworkCaller(endPoint: imageFetchServiceEndPoint)
     }
     
     func getData(forId id: Int = 5) {
@@ -25,7 +25,7 @@ class ViewModel {
         toDoFetchClient.request(withObject: nil) { [weak self] (result) in
             switch result.decodeJson(toType: ToDoData.self) {
             case .success(let data):
-                self?.dataModel!(data)
+                self?.dataModel(data)
                 print(data.title.value())
             case .failure(let error):
                 print(error)
@@ -37,7 +37,7 @@ class ViewModel {
         imageFetchClient.request(withObject: nil) { [weak self] (result) in
             switch result.getPNGImage() {
             case .success(let data):
-                self?.image!(data)
+                self?.image(data)
             case .failure(let error):
                 print(error)
             }

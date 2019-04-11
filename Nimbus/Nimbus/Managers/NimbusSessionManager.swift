@@ -69,7 +69,7 @@ class NimbusSessionManager: APIClient {
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: { (action) in
             let mainNavController = UINavigationController()
             let appCoordinator = AppCoordinator(navigationController: mainNavController)
-            appCoordinator.setInitialPage(isUserLoggedIn: false)
+            appCoordinator.setInitialPage()
         }))
         let topVC = ViewControllerUtility.getTopMostVC()
         if topVC?.presentedViewController == nil {
