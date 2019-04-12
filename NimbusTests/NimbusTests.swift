@@ -9,26 +9,26 @@
 import XCTest
 @testable import Nimbus
 
-class NimbusTests: XCTestCase {
+class NimbusTests: BaseXCTest {
+    
+    var sut: ViewModel!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        sut = ViewModel(todoFetchServiceEndPoint: ToDoDataEndPoint(), imageFetchServiceEndPoint: PlaceHolderImageEndPoint(), networkFactory: NetworkCallerFactory(callerType: .mockHttp(mockCaller: mockNetworkCaller)))
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func test_getData_whenNetworkCallIsSuccessful_triggersDataModelCallback() {
+        mockNetworkCaller.response = .success(jsonFileName: "Success")
+        //should use await, if the datamodel closure is not call test can pass by mistake
+        sut.dataModel = { data in
+            XCTAssertEqual(data.title, "title")
+            XCTAssertEqual(data.isCompleted, false)
         }
+        sut.getData()
     }
 
 }

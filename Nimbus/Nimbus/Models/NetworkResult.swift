@@ -13,9 +13,9 @@ enum NetworkResult<Value> {
     case failure(Error)
 }
 
-enum NetworkError: Error {
-    case apiError(message: String)
-}
+//enum NetworkError: Error {
+//    case apiError(message: String)
+//}
 
 extension NetworkResult {
     func returnValue() throws -> Value {
